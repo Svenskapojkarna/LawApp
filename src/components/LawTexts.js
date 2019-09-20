@@ -1,7 +1,6 @@
 import React from 'react'
 import '../styles/LawTexts.css'
 import {withRouter} from 'react-router-dom'
-import axios from 'axios'
 
 class LawTexts extends React.Component{
     constructor(props){
@@ -16,9 +15,6 @@ class LawTexts extends React.Component{
         event.preventDefault()
         let path = '/laws'
         this.props.history.push(path)
-    }
-    componentDidMount(){
-        this.state.firstLawText = {'First Country is' + {this.props.firstCountry}}
     }
     render(){
         return(
