@@ -1,11 +1,11 @@
 # LawApp
 
 ## Installation
-...
+´´´
 git clone https://github.com/LawProject/LawApp.git
 cd LawApp
 npm install
-...
+´´´
 
 ## Starting the application
 Go to the LawApp project folder and run these commands.
@@ -18,11 +18,11 @@ and starts the application at http://localhost:3000.
 You can open the application in any browser you want to use.
 
 If the console gives you an error while starting the application try running:
-...
+´´´
 git pull
 npm install
 npm start
-...
+´´´
 
 This will install missing modules and start the server.
 
