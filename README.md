@@ -1,11 +1,9 @@
 # LawApp
 
 ## Installation
-´´´
-git clone https://github.com/LawProject/LawApp.git
-cd LawApp
-npm install
-´´´
+´git clone https://github.com/LawProject/LawApp.git´
+´cd LawApp´
+´npm install´
 
 ## Starting the application
 Go to the LawApp project folder and run these commands.
