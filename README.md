@@ -1,9 +1,13 @@
 # LawApp
 
 ## Installation
-´git clone https://github.com/LawProject/LawApp.git´
-´cd LawApp´
-´npm install´
+```
+git clone https://github.com/LawProject/LawApp.git
+cd LawApp
+npm install
+```
+
+---
 
 ## Starting the application
 Go to the LawApp project folder and run these commands.
@@ -21,7 +25,8 @@ git pull
 npm install
 npm start
 ´´´
-
 This will install missing modules and start the server.
 
+---
+## Contact
 In case of problems, please contact hytonenaleksi@gmail.com
