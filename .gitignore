@@ -19,6 +19,7 @@ bin-release/
 
 # Exclude node modules.
 node_modules/
+build/
 
 # Firebase
 .firebase

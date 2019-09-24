@@ -3,7 +3,18 @@
     "rules": "database.rules.json"
   },
   "hosting": {
-    "site": "lawapptest",
-    "public": "public"
+    "public": "build",
+    "site": "lawapp-f11cc",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "public/index.html"
+      }
+    ]
   }
 }

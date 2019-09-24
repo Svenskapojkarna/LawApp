@@ -1,6 +1,7 @@
 import React from 'react'
 import '../styles/LawTexts.css'
 import {withRouter} from 'react-router-dom'
+import db from '../database/firebase';
 
 class LawTexts extends React.Component{
     constructor(props){
@@ -16,17 +17,33 @@ class LawTexts extends React.Component{
         let path = '/laws'
         this.props.history.push(path)
     }
+
+    componentDidMount(){
+        db.collection("finland")
+            .doc('private-law')
+            .get()
+            .then(doc => {
+                this.setState({firstLawText: doc.data()})
+            });
+        db.collection("germany")
+            .doc('private-law')
+            .get()
+            .then(doc => {
+                this.setState({secondLawText: doc.data()})
+            });
+    }
+
     render(){
         return(
             <center>
                 <div className="row">
                     <div className="column">
                         <h1>{this.props.firstCountry}</h1>
-                        First country is {this.props.firstCountry} and the law is {this.props.law}.
+                        First country is {this.props.firstCountry} and the law is {this.state.firstLawText}.
                     </div>
                     <div className="column">
                         <h1>{this.props.secondCountry}</h1>
-                        Second country is {this.props.secondCountry} and the law is {this.props.law}.
+                        Second country is {this.props.secondCountry} and the law is {this.state.secondLawText}.
                     </div>
                 </div>
                 <div>
