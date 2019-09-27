@@ -2,8 +2,8 @@ import firebase from "firebase";
 
 const firebaseApp = firebase.initializeApp({
     apiKey: " AIzaSyBwtGH20jx9cLC0-50U_V42iBBeZ5Or3qw",
-    authDomain: "lawapp-f11cc.firebaseapp.com",
-    databaseURL: "https://lawapp-f11cc.firebaseio.com",
+    authDomain: "lawapp-f11cc.web.app",
+    databaseURL: "https://lawapp-f11cc.web.app",
     projectId: "lawapp-f11cc",
     storageBucket: "",
     messagingSenderId: "421731918952"

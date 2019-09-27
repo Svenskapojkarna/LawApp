@@ -18,7 +18,7 @@ class LawTexts extends React.Component{
         this.props.history.push(path)
     }
 
-    /*componentDidMount(){
+    componentDidMount(){
         db.collection("finland")
             .doc('private-law')
             .get()
@@ -31,7 +31,7 @@ class LawTexts extends React.Component{
             .then(doc => {
                 this.setState({secondLawText: doc.data()})
             });
-    }*/
+    }
 
     render(){
         return(
