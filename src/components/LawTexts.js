@@ -1,14 +1,13 @@
 import React from 'react'
 import '../styles/LawTexts.css'
 import {withRouter} from 'react-router-dom'
-import db from '../database/firebase';
 
 class LawTexts extends React.Component{
     constructor(props){
         super(props)
         this.state = {
-            firstLawText: 'some law',
-            secondLawText: 'some law'
+            firstLawText: this.props.firstlaw,
+            secondLawText: this.props.secondlaw
         }
         this.backButton = this.backButton.bind(this)
     }
@@ -18,32 +17,17 @@ class LawTexts extends React.Component{
         this.props.history.push(path)
     }
 
-    componentDidMount(){
-        db.collection("finland")
-            .doc('private-law')
-            .get()
-            .then(doc => {
-                this.setState({firstLawText: doc.data()})
-            });
-        db.collection("germany")
-            .doc('private-law')
-            .get()
-            .then(doc => {
-                this.setState({secondLawText: doc.data()})
-            });
-    }
-
     render(){
         return(
             <center>
                 <div className="row">
                     <div className="column">
                         <h1>{this.props.firstCountry}</h1>
-                        First country is {this.props.firstCountry} and the law is {this.state.firstLawText}.
+                        First country is {this.props.firstCountry} and the law is {this.props.firstlaw}.
                     </div>
                     <div className="column">
                         <h1>{this.props.secondCountry}</h1>
-                        Second country is {this.props.secondCountry} and the law is {this.state.secondLawText}.
+                        Second country is {this.props.secondCountry} and the law is {this.props.secondlaw}.
                     </div>
                 </div>
                 <div>

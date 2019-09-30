@@ -1,17 +1,37 @@
 import React from 'react';
 import {withRouter} from 'react-router-dom'
+import db from '../database/firebase'
 
 class Lawlist extends React.Component{
     constructor(props){
         super(props)
         this.clickHandler = this.clickHandler.bind(this)
         this.backClickHandler = this.backClickHandler.bind(this)
+        this.getFirstData = this.getFirstData.bind(this)
+        this.getSecondData = this.getSecondData.bind(this)
     }
     clickHandler(event){
         event.preventDefault()
         this.props.lawSelect([event.target.value])
         let path = '/compare'
+        this.getData()
         this.props.history.push(path)
+    }
+    getFirtsData(){
+        db.collection("finland")
+            .doc('private-law')
+            .get()
+            .then(doc => {
+                let data = doc.data()
+                this.props.setFirstLaw(data)})
+    }
+    getSecondData(){
+        db.collection("finland")
+            .doc('private-law')
+            .get()
+            .then(doc => {
+                let data = doc.data()
+                this.props.setSecondLaw(data)})
     }
     backClickHandler(event){
         event.preventDefault()

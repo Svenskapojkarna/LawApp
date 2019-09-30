@@ -9,14 +9,14 @@ class CompareLaws extends React.Component{
         this.state = {
             firstCountry: props.firstCountry,
             secondCountry: props.secondCountry,
-            law: props.law
+            law: props.law,
         }
     }
     render(){
         return(
             <div>
                 <Header />
-                <LawTexts {...this.state} />
+                <LawTexts {...this.props} />
                 <Footer />
             </div>
         )
