@@ -10,9 +10,7 @@ import CompareLaws from './pages/CompareLaws'
 const state = {
     firstCountry: '',
     secondCountry: '',
-    law: '',
-    firstlaw: '',
-    secondlaw: ''
+    law: ''
 }
 
 function countriesSelected(first, second){

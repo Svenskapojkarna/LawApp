@@ -23,11 +23,11 @@ class LawTexts extends React.Component{
                 <div className="row">
                     <div className="column">
                         <h1>{this.props.firstCountry}</h1>
-                        First country is {this.props.firstCountry} and the law is {this.props.firstlaw}.
+                        First country is {this.props.firstCountry} and the law is {this.props.law}.
                     </div>
                     <div className="column">
                         <h1>{this.props.secondCountry}</h1>
-                        Second country is {this.props.secondCountry} and the law is {this.props.secondlaw}.
+                        Second country is {this.props.secondCountry} and the law is {this.props.law}.
                     </div>
                 </div>
                 <div>
