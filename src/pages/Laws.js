@@ -13,7 +13,13 @@ function Laws(props) {
         <center>
           <div className="entry-text">Select the law you want to compare.</div>
         </center>
-        <Lawlist countriesSelected={props.countriesSelected} lawSelect={props.lawSelect} firstlaw={props.firstlaw} secondlaw={props.secondlaw}/>
+        <Lawlist 
+          countriesSelected={props.countriesSelected} 
+          lawSelect={props.lawSelect} 
+          firstlaw={props.firstlaw} 
+          firstCountry = {props.firstCountry}
+          secondCountry = {props.secondCountry}
+          secondlaw={props.secondlaw}/>
         <Footer />
     </div>
   );

@@ -30,17 +30,15 @@ class TextBox extends React.Component{
                         <div className="col-xs">
                             <select className="form-control mr-2" value={this.state.first} name="first" onChange={this.onFieldChange}>
                                 <option value="Select Country">Select Country</option>
-                                <option value="Finland">Finland</option>
-                                <option value="Sweden">Sweden</option>
-                                <option value="Russia">Russia</option>
+                                <option value="finland">Finland</option>
+                                <option value="germany">Germany</option>
                             </select>
                         </div>
                         <div className="col-xs">
                             <select className="form-control ml-2" value={this.state.second} name="second" onChange={this.onFieldChange}>
                                 <option value="Select Country">Select Country</option>
-                                <option value="Finland">Finland</option>
-                                <option value="Sweden">Sweden</option>
-                                <option value="Russia">Russia</option>
+                                <option value="finland">Finland</option>
+                                <option value="germany">Germany</option>
                             </select>
                         </div>
                     </div>

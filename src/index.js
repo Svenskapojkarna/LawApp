@@ -10,7 +10,9 @@ import CompareLaws from './pages/CompareLaws'
 const state = {
     firstCountry: '',
     secondCountry: '',
-    law: ''
+    law: '',
+    firstText: '',
+    secondText: ''
 }
 
 function countriesSelected(first, second){
@@ -23,11 +25,11 @@ function lawSelect(law){
 }
 
 function setFirstLaw(law){
-    state.firstlaw = law
+    state.firstText = law
 }
 
 function setSecondLaw(law){
-    state.secondlaw = law
+    state.secondText = law
 }
 
 function AppWrapper(){
