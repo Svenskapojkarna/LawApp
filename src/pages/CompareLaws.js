@@ -4,14 +4,6 @@ import Footer from '../components/Footer'
 import LawTexts from '../components/LawTexts'
 
 class CompareLaws extends React.Component{
-    constructor(props){
-        super(props)
-        this.state = {
-            firstCountry: props.firstCountry,
-            secondCountry: props.secondCountry,
-            law: props.law,
-        }
-    }
     render(){
         return(
             <div>

@@ -5,10 +5,6 @@ import {withRouter} from 'react-router-dom'
 class LawTexts extends React.Component{
     constructor(props){
         super(props)
-        this.state = {
-            firstLawText: this.props.firstlaw,
-            secondLawText: this.props.secondlaw
-        }
         this.backButton = this.backButton.bind(this)
     }
     backButton(event){
@@ -18,16 +14,23 @@ class LawTexts extends React.Component{
     }
 
     render(){
+
+        const renderText = (
+            // Tähän pitää lisätä tekstien mäppäys
+            console.log("kesken")
+        )
+
         return(
             <center>
                 <div className="row">
                     <div className="column">
                         <h1>{this.props.firstCountry}</h1>
-                        {this.props.firstlaw}.
+                        <p>{this.props.firstText}</p>
+                        {renderText}
                     </div>
                     <div className="column">
                         <h1>{this.props.secondCountry}</h1>
-                        {this.props.secondlaw}.
+                        <p>{this.props.secondText}</p>
                     </div>
                 </div>
                 <div>

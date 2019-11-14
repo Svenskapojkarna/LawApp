@@ -11,7 +11,7 @@ const state = {
     firstCountry: '',
     secondCountry: '',
     law: '',
-    firstText: '',
+    firstText: [],
     secondText: ''
 }
 
