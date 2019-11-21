@@ -16,8 +16,11 @@ class LawTexts extends React.Component{
     render(){
 
         const renderText = (
-            // Tähän pitää lisätä tekstien mäppäys
-            console.log("kesken")
+            <div>
+                {this.props.firstText.map((text, index) => {
+                    return <p key={index}>{text}</p>
+                })}
+            </div>
         )
 
         return(
@@ -25,7 +28,6 @@ class LawTexts extends React.Component{
                 <div className="row">
                     <div className="column">
                         <h1>{this.props.firstCountry}</h1>
-                        <p>{this.props.firstText}</p>
                         {renderText}
                     </div>
                     <div className="column">

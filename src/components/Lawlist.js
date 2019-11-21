@@ -7,24 +7,19 @@ class Lawlist extends React.Component{
         super(props)
         this.backClickHandler = this.backClickHandler.bind(this)
     }
+
     clickHandler = event => {
         event.preventDefault()
         let firstText = []
         let counter = 1
-        let secondText = []
         this.props.lawSelect([event.target.value])
         const firstRef = firebase.firestore().collection(this.props.firstCountry).doc(event.target.value)
-        const secondRef = firebase.firestore().collection(this.props.secondCountry).doc(event.target.value)
         firstRef.get().then(doc => {
             while(counter <= doc.data()["length"]){
                 firstText.push(doc.data()[counter]["law"])
                 counter++
             }
-        })
-        secondRef.get().then(doc => {
-            secondText.push(doc.data()[1]["law"])
-            this.props.secondlaw(secondText.join(' '))
-            console.log(secondText[0])
+            this.props.firstlaw(firstText)
         })
         return new Promise(resolve => {
             setTimeout(() => {
@@ -32,24 +27,20 @@ class Lawlist extends React.Component{
             }, 2000)
         })
     }
+
     changePage = async(event) => {
         await this.clickHandler(event)
         let path = '/compare'
         this.props.history.push(path)
     }
+
     backClickHandler(event){
         event.preventDefault()
         this.props.countriesSelected("Select Country", "Select Country")
         let path = '/'
         this.props.history.push(path)
     }
-    getFirstData = firstRef => {
-        let firstText = []
-        firstRef.get().then(doc => {
-            firstText.push(doc.data()[1]["law"])
-        })
-        return firstText
-    }
+
     render(){
         return(
             <center>
