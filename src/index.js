@@ -6,6 +6,7 @@ import App from './pages/App';
 import * as serviceWorker from './components/serviceWorker';
 import Laws from './pages/Laws'
 import CompareLaws from './pages/CompareLaws'
+import AddLaw from './pages/AddLaw'
 
 const state = {
     firstCountry: '',
@@ -42,6 +43,10 @@ function LawsWrapper(){
     return <Laws {...state} countriesSelected={countriesSelected} lawSelect={lawSelect} firstlaw={setFirstLaw} secondlaw={setSecondLaw}/>
 }
 
+function AddLawWrapper(){
+    return <AddLaw {...state}/>
+}
+
 function CompareLawsWrapper(){
     return <CompareLaws {...state} />
 }
@@ -52,6 +57,7 @@ function render(){
         <Route exact path="/" component={AppWrapper} />
         <Route path="/laws" component={LawsWrapper} />
         <Route path="/compare" component={CompareLawsWrapper} />
+        <Route path="/add" component={AddLawWrapper} />
     </BrowserRouter>, 
     document.getElementById('root'));
 }

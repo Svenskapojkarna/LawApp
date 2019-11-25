@@ -11,17 +11,25 @@ class TextBox extends React.Component{
         this.onFieldChange = this.onFieldChange.bind(this)
         this.selectClickHandler = this.selectClickHandler.bind(this)
     }
+
     onFieldChange(event){
         this.setState({
             [event.target.name]: event.target.value
         })
     }
+
     selectClickHandler(event){
         event.preventDefault()
         this.props.countriesSelected(this.state.first, this.state.second)
         let path = '/laws'
         this.props.history.push(path)
     }
+
+    addClickHandler = (event) => {
+        event.preventDefault()
+        this.props.history.push('/add')
+    }
+
     render(){
         return(
             <div>
@@ -44,6 +52,7 @@ class TextBox extends React.Component{
                     </div>
                     <div>
                         <button className="btn btn-primary mt-3 mb-3" onClick={this.selectClickHandler}>Select</button>
+                        <button className="btn btn-primary mt-3 mb-3" onClick={this.addClickHandler}>Add new law</button>
                     </div>
                 </center>
             </div>
