@@ -1,4 +1,5 @@
 import React from 'react'
+import {withRouter} from 'react-router-dom'
 
 class Buttons extends React.Component{
 
@@ -18,4 +19,4 @@ class Buttons extends React.Component{
     }
 }
 
-export default Buttons
+export default withRouter(Buttons)

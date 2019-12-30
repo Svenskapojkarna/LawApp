@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from '../components/Header'
 import Buttons from '../components/AddLawComponents/Buttons'
+import TextBoxes from '../components/AddLawComponents/TextBoxes'
 
 class AddLaw extends React.Component{
 
@@ -11,6 +12,7 @@ class AddLaw extends React.Component{
                 <center>
                     <div className="entry-text">Here you can add new laws.</div>
                 </center>
+                <TextBoxes />
                 <Buttons />
             </div>
         )
